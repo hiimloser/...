@@ -1,0 +1,213 @@
+#include <stdio.h>
+#include <math.h>
+#include <windows.h>
+#include <stdlib.h>
+#include<string.h>
+int a=10;int b=7;
+int s=10;int d=8;
+int e=10;int f=9;
+int g=10;int v=10;
+int i=10;int k=11;
+int l=10;int m=12;
+int p=10;int q=13;
+int x=10;int y=14;
+int z=10;int t=15;
+void gotoxy(int x, int y)
+{
+    static HANDLE h = NULL;
+    if(!h)
+    h = GetStdHandle(STD_OUTPUT_HANDLE);
+    COORD c = { x, y };
+    SetConsoleCursorPosition(h,c);
+}
+void showtym()
+{
+	//ab
+    while(a<50)
+	{
+        gotoxy(10,7);puts(" Hey Rinb !!!");
+        gotoxy(a,b);
+        puts(" *** *** ");
+        a++;
+        Sleep(100);
+    }
+//sd
+    while(s<50)
+	{
+        gotoxy(10,8);puts(" Do you know ...");
+        gotoxy(s,d);
+        puts(" ******* ******* ");
+        s++;
+        Sleep(100);
+    }
+//ef
+    while(e<50)
+	{
+        gotoxy(10,9);puts(" Every day,I always...");
+        gotoxy(e,f);
+        puts(" ********* ********* ");
+        e++;
+        Sleep(100);
+    } 
+//gv
+    while(g<50)
+	{
+        gotoxy(10,10);puts(" Miss you,");
+        gotoxy(g,v);
+        puts(" ******************* ");
+        g++;
+        Sleep(100);
+    }
+//ik
+    while(i<50)
+	{
+        gotoxy(10,11);puts(" Miss your smile,");
+        gotoxy(i,k);
+        puts(" ***************** ");
+        i++;
+        Sleep(100);
+    }
+//lm
+    while(l<50)
+	{
+        gotoxy(10,12);puts(" Miss your voice,");
+        gotoxy(l,m);
+        puts(" *************");
+        l++;
+        Sleep(100);
+    }
+//pq
+    while(p<50)
+	{
+        gotoxy(10,13);puts(" Miss your eyes,...");
+        gotoxy(p,q);
+        puts(" ******* ");
+        p++;
+        Sleep(100);
+    }
+//xy
+    while(x<50)
+	{
+        gotoxy(10,14);puts("And today,I want to tell you that:");
+        gotoxy(x,y);
+        puts(" *** ");
+        x++;
+        Sleep(100);
+    }
+//zt
+    while(z<50)
+	{
+        gotoxy(10,15);puts(" '? I LOVE YOU ?' ");
+        gotoxy(z,t);
+        puts(" * ");
+        z++;
+        Sleep(200);
+    }
+    printf("\n\n");
+}
+void loading()
+{
+	char a=177, b=219;
+	printf("\t\t\t\tloading.......\n");
+	printf("\t\t\t");
+	for(int i=0;i<26;i++)
+	{
+		printf("%c",a);
+	}
+	printf("\r");
+	printf("\t\t\t");
+	for(int i=0;i<26;i++)
+	{
+		printf("%c",b);
+		Sleep(100);
+	}
+	printf("\ncomplete!!!\n");
+}
+void account()
+{
+	char a[]="obito",c[100];
+	char b[]="rin",d[100];
+	char e[200];
+	do
+	{
+		printf("account : ");
+		scanf("%s",&c);
+		printf("password : ");
+		scanf("%s",&d);
+		if(strcmp(a,c)!=0||strcmp(b,d)!=0)
+		{
+			printf("nope\n");
+		}
+		else
+		{
+			printf("access !!\n");
+		}
+	}
+	while(strcmp(a,c)!=0||strcmp(b,d)!=0);
+}
+void readfile1()
+{
+	char e[200];
+	FILE*f;
+	f=fopen("C:\\trend\\anh1.txt","r");
+	while(!feof(f))
+	{
+		fgets(e,200,f);
+		printf("%s",e);
+		Sleep(100);
+	}
+	fclose(f);
+}
+void readfile2()
+{
+	char e[200];
+	FILE*f;
+	f=fopen("C:\\trend\\anh2.txt","r");
+	while(!feof(f))
+	{
+		fgets(e,200,f);
+		printf("%s",e);
+		Sleep(100);
+	}
+	fclose(f);
+}
+void readfile3()
+{
+	char e[200];
+	FILE*f;
+	f=fopen("C:\\trend\\anh3.txt","r");
+	while(!feof(f))
+	{
+		fgets(e,200,f);
+		printf("%s",e);
+		Sleep(100);
+	}
+	fclose(f);
+}
+void readfile4()
+{
+	char e[200];
+	FILE*f;
+	f=fopen("C:\\trend\\anh4.txt","r");
+	while(!feof(f))
+	{
+		fgets(e,200,f);
+		printf("%s",e);
+		Sleep(100);
+	}
+	fclose(f);
+}
+int main()
+{
+	account();
+	loading();
+	showtym();
+	printf("\n");
+	readfile1();
+	printf("\n");
+	readfile2();
+	printf("\n");
+	readfile3();
+	printf("\n");
+	readfile4();
+}
